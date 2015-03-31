@@ -1,4 +1,5 @@
-Tad XXX 1.0 正式版功能項目（2013-09-16 釋出）
-=================================================
- 1.後台界面全面重寫，套入BootStrap界面
- 
+XOOPS2.5 Demo modules 1.0 （2015/03/21 release）
+===========================================
+1.fix xoops_version.php
+2.add $xoopsTpl
+3.add bootstrap

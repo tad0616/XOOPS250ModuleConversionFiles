@@ -1,12 +1,6 @@
 <?php
+include_once XOOPS_ROOT_PATH."/modules/tadtools/language/{$xoopsConfig['language']}/modinfo_common.php";
 
-//Version XXX
-
-define('_MI_MYMODULE_ADMIN_HOME',"Home"); 
-define("_MI_MYMODULE_ADMIN_HOME_DESC","Back to Home");
-
-define("_MI_MYMODULE_ADMIN_ABOUT" , "About");
-define("_MI_MYMODULE_ADMIN_ABOUT_DESC" , "About this module");
-
-
+define("_MI_XXX_ADMENU1" , "Main");
+define("_MI_XXX_ADMENU1_DESC" , "Admin main page");
 ?>

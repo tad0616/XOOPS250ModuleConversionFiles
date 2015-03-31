@@ -1,8 +1,8 @@
 <?php
 /*-----------引入檔案區--------------*/
+$xoopsOption['template_main'] = "demo_adm_index.html";
 include_once "header.php";
-$xoopsOption['template_main'] = set_bootstrap("demo_index.html");
-include_once XOOPS_ROOT_PATH."/header.php";
+include_once "../function.php";
 
 /*-----------function區--------------*/
 
@@ -10,7 +10,7 @@ include_once XOOPS_ROOT_PATH."/header.php";
 function show_content(){
   global $xoopsTpl;
 
-  $main="模組開發中";
+  $main="後台頁面開發中";
   $xoopsTpl->assign('content' , $main);
 }
 
@@ -28,6 +28,5 @@ switch($op){
   break;
 }
 
-/*-----------秀出結果區--------------*/
-include_once XOOPS_ROOT_PATH.'/footer.php';
+include_once 'footer.php';
 ?>

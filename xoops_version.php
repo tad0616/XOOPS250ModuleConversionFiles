@@ -15,20 +15,20 @@ $modversion['dirname'] = basename(dirname(__FILE__));
 
 
 //---模組狀態資訊---//
-$modversion['release_date'] = '2013/06/6';
-$modversion['module_website_url'] = 'http://tad0616.net/';
-$modversion['module_website_name'] = _MI_TAD_WEB;
+$modversion['release_date'] = '2015/03/21';
+$modversion['module_website_url'] = 'http://模組官網網址';
+$modversion['module_website_name'] = '模組官網名稱';
 $modversion['module_status'] = 'release';
-$modversion['author_website_url'] = 'http://tad0616.net/';
-$modversion['author_website_name'] = _MI_TAD_WEB;
+$modversion['author_website_url'] = 'http://作者網站網址';
+$modversion['author_website_name'] = '作者網站名稱';
 $modversion['min_php']=5.2;
 $modversion['min_xoops']='2.5';
 $modversion['min_tadtools']='1.20';
 
 //---paypal資訊---//
 $modversion ['paypal'] = array();
-$modversion ['paypal']['business'] = 'tad0616@gmail.com';
-$modversion ['paypal']['item_name'] = 'Donation : ' . _MI_TAD_WEB;
+$modversion ['paypal']['business'] = '作者@的Email';
+$modversion ['paypal']['item_name'] = 'Donation : ' . '贊助對象名稱';
 $modversion ['paypal']['amount'] = 0;
 $modversion ['paypal']['currency_code'] = 'USD';
 
@@ -60,14 +60,32 @@ $modversion['hasMain'] = 1;
 //$modversion['onUninstall'] = "include/onUninstall.php";
 
 
+//---樣板設定---//
+$modversion['templates'] = array();
+$i=1;
+$modversion['templates'][$i]['file'] = 'demo_index.html';
+$modversion['templates'][$i]['description'] = '模組首頁樣板';
+$i++;
+$modversion['templates'][$i]['file'] = 'demo_index_b3.html';
+$modversion['templates'][$i]['description'] = '模組首頁樣板 for bootstrap3';
+
+$i++;
+$modversion['templates'][$i]['file'] = 'demo_adm_index.html';
+$modversion['templates'][$i]['description'] = '後台管理頁樣板';
+$i++;
+$modversion['templates'][$i]['file'] = 'demo_adm_index_b3.html';
+$modversion['templates'][$i]['description'] = '後台管理頁樣板 for bootstrap3';
+
+
 //---偏好設定---//
 $modversion['config'] = array();
-//$modversion['config'][0]['name']	= '偏好設定名稱（英文）';
-//$modversion['config'][0]['title']	= '偏好設定標題（常數）';
-//$modversion['config'][0]['description']	= '偏好設定說明（常數）';
-//$modversion['config'][0]['formtype']	= '輸入表單類型';
-//$modversion['config'][0]['valuetype']	= '輸入值類型';
-//$modversion['config'][0]['default']	= 預設值;
+//$i=0;
+//$modversion['config'][$i]['name']	= '偏好設定名稱（英文）';
+//$modversion['config'][$i]['title']	= '偏好設定標題（常數）';
+//$modversion['config'][$i]['description']	= '偏好設定說明（常數）';
+//$modversion['config'][$i]['formtype']	= '輸入表單類型';
+//$modversion['config'][$i]['valuetype']	= '輸入值類型';
+//$modversion['config'][$i]['default']	= 預設值;
 
 
 //---搜尋---//
@@ -84,11 +102,6 @@ $modversion['config'] = array();
 //$modversion['blocks'][1]['template'] = "區塊樣板.html";
 //$modversion['blocks'][1]['edit_func'] = "編輯區塊函數名稱";
 //$modversion['blocks'][1]['options'] = "設定值1|設定值2";
-
-//---樣板設定---//
-$modversion['templates'] = array();
-//$modversion['templates'][1]['file'] = 'xxx.html';
-//$modversion['templates'][1]['description'] = '';
 
 
 //---評論---//
