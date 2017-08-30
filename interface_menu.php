@@ -1,7 +1,7 @@
 <?php
 
 //判斷是否對該模組有管理權限
-$isAdmin == false;
+$isAdmin = false;
 if ($xoopsUser) {
     $module_id = $xoopsModule->getVar('mid');
     $isAdmin   = $xoopsUser->isAdmin($module_id);
