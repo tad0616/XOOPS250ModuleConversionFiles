@@ -14,7 +14,7 @@ $modversion['image']       = 'images/logo.png';
 $modversion['dirname']     = basename(dirname(__FILE__));
 
 //---模組狀態資訊---//
-$modversion['release_date']        = '2017/07/07';
+$modversion['release_date']        = '2018/03/10';
 $modversion['module_website_url']  = 'http://模組官網網址';
 $modversion['module_website_name'] = '模組官網名稱';
 $modversion['module_status']       = 'release';
@@ -22,7 +22,6 @@ $modversion['author_website_url']  = 'http://作者網站網址';
 $modversion['author_website_name'] = '作者網站名稱';
 $modversion['min_php']             = 5.4;
 $modversion['min_xoops']           = '2.5';
-$modversion['min_tadtools']        = '1.20';
 
 //---paypal資訊---//
 $modversion['paypal']                  = array();
@@ -45,8 +44,10 @@ $modversion['adminmenu']  = 'admin/menu.php';
 
 //---前台主選單設定---//
 $modversion['hasMain'] = 1;
-//$modversion['sub'][1]['name'] = '';
-//$modversion['sub'][1]['url'] = '';
+//$i=1;
+//$modversion['sub'][$i]['name'] = '';
+//$modversion['sub'][$i]['url'] = '';
+//$i++;
 
 //---模組自動功能---//
 //$modversion['onInstall'] = "include/install.php";
