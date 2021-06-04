@@ -1,55 +1,29 @@
 <?php
+// 如「模組目錄」= signup，則「首字大寫模組目錄」= Signup
+// 如「資料表名」= actions，則「模組物件」= Actions
 
-namespace XoopsModules\物件名稱;
+namespace XoopsModules\首字大寫模組目錄;
 
-/*
-Update Class Definition
-
-You may not change or alter any portion of this comment or credits of
-supporting developers from this source code or any supporting source code
-which is considered copyrighted (c) material of the original comment or credit
-authors.
-
-This program is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- */
-
-/**
- * @license      http://www.fsf.org/copyleft/gpl.html GNU public license
- * @copyright    https://xoops.org 2001-2017 &copy; XOOPS Project
- * @author       Mamba <mambax7@gmail.com>
- */
-
-/**
- * Class Update
- */
 class Update
 {
+    // 進行某些檢查
+    public static function chk_1()
+    {
+        global $xoopsDB;
+        // $sql = 'SELECT count(*) FROM ' . $xoopsDB->prefix('資料表名') . ' ';
+        // $result = $xoopsDB->query($sql);
+        // if (empty($result)) {
+        //     return true;
+        // }
 
-    /*
-public static function chk_1()
-{
-global $xoopsDB;
-$sql = 'SELECT count(`tag`) FROM ' . $xoopsDB->prefix('tadnews_files_center');
-$result = $xoopsDB->query($sql);
-if (empty($result)) {
-return true;
-}
+        return false;
+    }
 
-return false;
-}
-
-public static function go_1()
-{
-global $xoopsDB;
-$sql = 'ALTER TABLE ' . $xoopsDB->prefix('tadnews_files_center') . "
-ADD `upload_date` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '上傳時間',
-ADD `uid` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT 0 COMMENT '上傳者',
-ADD `tag` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '註記'
-";
-$xoopsDB->queryF($sql) or redirect_header(XOOPS_URL . '/modules/system/admin.php?fct=modulesadmin', 30, $xoopsDB->error());
-}
- */
-
+    // 執行某些調整
+    public static function go_1()
+    {
+        global $xoopsDB;
+        // $sql = 'ALTER TABLE ' . $xoopsDB->prefix('資料表名') . '';
+        // $xoopsDB->queryF($sql) or redirect_header(XOOPS_URL . '/modules/system/admin.php?fct=modulesadmin', 30, $xoopsDB->error());
+    }
 }
