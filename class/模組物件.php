@@ -38,11 +38,10 @@ class 模組物件
         $formValidator->render();
 
         //加入Token安全機制
-        include_once XOOPS_ROOT_PATH . "/class/xoopsformloader.php";
+        include_once $GLOBALS['xoops']->path('class/xoopsformloader.php');
         $token = new \XoopsFormHiddenToken();
         $token_form = $token->render();
         $xoopsTpl->assign("token_form", $token_form);
-        $xoopsTpl->assign('action', $_SERVER["PHP_SELF"]);
         $xoopsTpl->assign('next_op', $op);
     }
 
@@ -89,13 +88,13 @@ class 模組物件
         $data = self::get($id);
 
         $myts = \MyTextSanitizer::getInstance();
-
-        //過濾讀出的變數值 displayTarea($text, $html=0, $smiley=1, $xcode=1, $image=1, $br=1);
-        // $data['大量文字欄'] = $myts->displayTarea($data['大量文字欄'], 0, 1, 0, 1, 1);
-        // $data['HTML文字欄'] = $myts->displayTarea($data['HTML文字欄'], 1, 0, 0, 0, 0);
-
         foreach ($data as $col_name => $col_val) {
             $col_val = $myts->htmlSpecialChars($col_val);
+
+            //過濾讀出的變數值 displayTarea($text, $html=0, $smiley=1, $xcode=1, $image=1, $br=1);
+            // $data['大量文字欄'] = $myts->displayTarea($data['大量文字欄'], 0, 1, 0, 1, 1);
+            // $data['HTML文字欄'] = $myts->displayTarea($data['HTML文字欄'], 1, 0, 0, 0, 0);
+
             $xoopsTpl->assign($col_name, $col_val);
         }
     }
