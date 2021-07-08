@@ -32,6 +32,7 @@ class 模組物件
         }
 
         $op = empty($id) ? "資料表名_store" : "資料表名_update";
+        $xoopsTpl->assign('next_op', $op);
 
         //套用formValidator驗證機制
         $formValidator = new FormValidator("#myForm", true);
@@ -42,7 +43,6 @@ class 模組物件
         $token = new \XoopsFormHiddenToken();
         $token_form = $token->render();
         $xoopsTpl->assign("token_form", $token_form);
-        $xoopsTpl->assign('next_op', $op);
     }
 
     //新增資料
